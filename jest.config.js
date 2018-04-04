@@ -2,19 +2,10 @@
 
 var ignoreModule = '<rootDir>/tests/empty-module.js';
 module.exports = {
-  'globals': {
-    'ts-jest': {
-      'tsConfigFile': 'tsconfig.json',
-      'disableSourceMapSupport': false,
-      'useBabelrc': true,
-      'skipBabel': false,
-    },
-  },
   'transform': {
-    '^.+\\.tsx?$': 'ts-jest',
     '^.+\\.jsx?$': 'babel-jest',
   },
-  'testRegex': '.*\\.test\\.tsx?$',
+  'testRegex': '.*\\.test\\.jsx?$',
   'moduleFileExtensions': [
     'ts',
     'tsx',
@@ -23,8 +14,8 @@ module.exports = {
     'json',
     'node',
   ],
-   'moduleNameMapper': {
-     '\.s?css$': ignoreModule,
-   },
+  'moduleNameMapper': {
+    '\.s?css$': ignoreModule,
+  },
 };
 

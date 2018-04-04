@@ -10,12 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/classnames": "2.2.3",
-    "@types/enzyme": "3.1.9",
-    "@types/enzyme-adapter-react-15.4": "1.0.1",
-    "@types/jest": "^22.2.2",
-    "@types/node": "8.5.9",
-    "@types/react": "15.0.39",
     "babel-core": "6.26.0",
     "babel-plugin-transform-async-functions": "6.22.0",
     "babel-plugin-transform-builtin-extend": "1.1.2",
@@ -34,7 +28,5 @@
     "react": "15.4.2",
     "react-addons-test-utils": "=15.4.2",
     "react-dom": "15.4.2",
-    "ts-jest": "22.4.2",
-    "typescript": "2.8.1"
   }
 }
