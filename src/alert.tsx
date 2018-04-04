@@ -5,8 +5,6 @@ import React from 'react';
 
 import 'bootstrap.css';
 
-// import 'fail';
-
 export enum AlertType {
     Success,
     Info,
@@ -27,7 +25,8 @@ export type AlertProps = {
     type: AlertType,
 };
 
-const foo: any = undefined;
+// throw new Error('bad sourcemap');
+
 export class Alert extends React.Component<AlertProps> {
     static Types = AlertType;
     static contextTypes = {
@@ -45,7 +44,7 @@ export class Alert extends React.Component<AlertProps> {
         return (
             <div className={finalClassName}>
                 {
-                    // foo.fail &&
+                    // throw new Error('good sourcemap')
                     onDismiss && <button type="button" className="close" onClick={onDismiss}>&times;</button>
                 }
                 {children}
