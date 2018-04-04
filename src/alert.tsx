@@ -25,7 +25,7 @@ export type AlertProps = {
     type: AlertType,
 };
 
-// throw new Error('bad sourcemap');
+throw new Error('bad sourcemap');
 
 export class Alert extends React.Component<AlertProps> {
     static Types = AlertType;

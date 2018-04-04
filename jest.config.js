@@ -6,7 +6,7 @@ module.exports = {
     'ts-jest': {
       'tsConfigFile': 'tsconfig.json',
       'disableSourceMapSupport': false,
-      'useBabelrc': false,
+      'useBabelrc': true,
       'skipBabel': false,
     },
   },
