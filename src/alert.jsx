@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import 'bootstrap.css';
 
@@ -20,11 +21,6 @@ const alertTypeToCSS = new Map([
 throw new Error('bad sourcemap');
 
 class Alert extends React.Component {
-    static Types = AlertType;
-    static contextTypes = {
-        themeClass: React.PropTypes.string,
-    };
-
     render() {
         // throw new Error('good sourcemap')
         const { className, onDismiss, type, children } = this.props;
@@ -46,9 +42,9 @@ class Alert extends React.Component {
 }
 
 Alert.propTypes = {
-  className: React.PropTypes.string,
-  onDismiss: React.PropTypes.func,
-  type: React.PropTypes.string.isRequired,
+  className: PropTypes.string,
+  onDismiss: PropTypes.func,
+  type: PropTypes.string.isRequired,
 };
 
 export { Alert };

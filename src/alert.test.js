@@ -1,10 +1,9 @@
-import assert from 'assert';
 import React from 'react';
 import { shallow } from '../tests/helpers';
 import { Alert, AlertType } from './alert.jsx';
 
-describe('ButtonGroup', () => {
-    it('large size', () => {
+describe('Alert', () => {
+    it('works', () => {
       const wrapper = shallow(React.createElement(Alert, {
           className: "foo",
           type: AlertType.Info,
@@ -12,7 +11,9 @@ describe('ButtonGroup', () => {
         React.createElement('span', null, 'bar')
       ));
 
-      assert.ok(wrapper.contains(<span>bar</span>));
-      assert.equal(wrapper.prop('className'), 'foo alert alert-info');
+      expect(wrapper.contains(
+        React.createElement('span', null, 'bar')
+      )).toBeTruthy();
+      expect(wrapper.prop('className')).toEqual('foo alert alert-info');
     });
 });
