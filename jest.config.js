@@ -14,7 +14,6 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest',
     '^.+\\.jsx?$': 'babel-jest',
   },
-  //'setupTestFrameworkScriptFile': path.resolve(__dirname, './jest-test-common-setup.js'),
   'testRegex': '.*\\.test\\.tsx?$',
   'moduleFileExtensions': [
     'ts',
@@ -24,7 +23,6 @@ module.exports = {
     'json',
     'node',
   ],
-  // 'resolver': 'jest-shift-resolver',
    'moduleNameMapper': {
      '\.s?css$': ignoreModule,
    },
