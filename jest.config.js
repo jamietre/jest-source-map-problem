@@ -1,6 +1,6 @@
 /* eslint flowtype/require-valid-file-annotation: 0 */
 
-var ignoreModule = '<rootDir>/tests/empty-module.js';
+var ignoreModule = '<rootDir>/src/util/empty-module.js';
 module.exports = {
   'transform': {
     '^.+\\.jsx?$': 'babel-jest',
