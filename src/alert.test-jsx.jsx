@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from './util/helpers';
+import { shallow } from './utils/helpers';
 import { Alert, AlertType } from './alert.jsx';
 
 describe('Alert', () => {

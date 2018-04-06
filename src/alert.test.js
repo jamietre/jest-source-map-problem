@@ -1,9 +1,10 @@
 import React from 'react';
-import { shallow } from './util/helpers';
+import { shallow } from './utils/helpers';
 import { Alert, AlertType } from './alert.jsx';
 
+
 describe('Alert', () => {
-    it('works', () => {
+  it('works', () => {
       const wrapper = shallow(React.createElement(Alert, {
           className: "foo",
           type: AlertType.Info,

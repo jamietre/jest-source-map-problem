@@ -1,26 +1,32 @@
+/* @flow */
+
 import classNames from 'classnames';
 import React from 'react';
-import PropTypes from 'prop-types';
 
-export const AlertType = {
-    Success: 'Success',
-    Info: 'Info',
-    Warning: 'Warning',
-    Danger: 'Danger',
+export enum AlertType {
+    Success,
+    Info,
+    Warning,
+    Danger,
 }
 
-const alertTypeToCSS = new Map([
+const alertTypeToCSS = new Map<AlertType, string>([
     [AlertType.Success, 'alert-success'],
     [AlertType.Info, 'alert-info'],
     [AlertType.Warning, 'alert-warning'],
     [AlertType.Danger, 'alert-danger'],
 ]);
 
+export type AlertProps = {
+    className?: string,
+    onDismiss?: () => void,
+    type: AlertType,
+};
+
 // throw new Error('bad sourcemap');
 
-class Alert extends React.Component {
+export class Alert extends React.Component<AlertProps> {
     render() {
-        throw new Error('good sourcemap')
         const { className, onDismiss, type, children } = this.props;
         const finalClassName = classNames(
             className,
@@ -31,6 +37,7 @@ class Alert extends React.Component {
         return (
             <div className={finalClassName}>
                 {
+                    //fail()
                     onDismiss && <button type="button" className="close" onClick={onDismiss}>&times;</button>
                 }
                 {children}
@@ -39,10 +46,6 @@ class Alert extends React.Component {
     }
 }
 
-Alert.propTypes = {
-  className: PropTypes.string,
-  onDismiss: PropTypes.func,
-  type: PropTypes.string.isRequired,
-};
-
-export { Alert };
+function fail() {
+    throw new Error();
+}
