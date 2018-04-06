@@ -1,46 +1,36 @@
 # jest-source-map-problem
 
-Running `yarn test` will cause the test to fail, but source maps don't work correctly
+Running `yarn test` will cause the test to fail, but source maps don't work correctly for JavaScript files that are
+imported by TypeScript files
 
 ```
 > yarn test
 yarn run v1.3.2
 warning ../package.json: No license field
 $ jest --config jest.config.js --runInBand
- FAIL  src/alert.test.jsx
-  ● Test suite failed to run
+ FAIL  src/alert.test.tsx
+  Alert
+    ✕ large size (6ms)
 
-    bad sourcemap
+  ● Alert › large size
 
-      39 |             </div>
-      40 |         );
-    > 41 |     }
-      42 | }
-      43 |
-      44 | Alert.propTypes = {
+    error in shallow
 
-      at Object.<anonymous> (src/alert.jsx:41:7)
-      at Object.<anonymous> (src/alert.test.jsx:9:14)
+      19 |  * It shows some lines
+      20 |  *
+    > 21 |  * From the original code
+      22 |  *
+      23 |  * Since the generated code is longer
+      24 |  *
 
- FAIL  src/alert.test.js
-  ● Test suite failed to run
+      at shallow (src/utils/helpers.js:21:9)
+      at Object.it (src/alert.test.tsx:10:33)
 
-    bad sourcemap
-
-      39 |             </div>
-      40 |         );
-    > 41 |     }
-      42 | }
-      43 |
-      44 | Alert.propTypes = {
-
-      at Object.<anonymous> (src/alert.jsx:41:7)
-      at Object.<anonymous> (src/alert.test.js:9:14)
-
-Test Suites: 2 failed, 2 total
-Tests:       0 total
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        1.223s
+Time:        1.438s, estimated 2s
 Ran all test suites.
 error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
