@@ -1,7 +1,5 @@
-/* @flow */
-
-import classNames from 'classnames';
-import React from 'react';
+import * as classNames from 'classnames';
+import * as React from 'react';
 
 export enum AlertType {
     Success,

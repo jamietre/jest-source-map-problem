@@ -1,5 +1,5 @@
-import assert from 'assert';
-import React from 'react';
+import * as assert from 'assert';
+import * as React from 'react';
 import { shallow } from './utils/helpers';
 import { Alert, AlertType } from './alert';
 
